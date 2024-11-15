@@ -114,7 +114,7 @@ email: Email del usuario
 
 password: Contraseña
 
-### Este endpoint devuelve un token que debe ser utilizado en todas las solicitudes protegidas (Productor y Órdenes).
+### Este endpoint devuelve un token que debe ser utilizado en todas las solicitudes protegidas (Productos y Órdenes).
 
 #### Cerrar Sesión
 
