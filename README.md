@@ -4,12 +4,12 @@ ProductOrderService es una API de backend construida en Laravel que permite gest
 
 ## Requisitos previos
 
-- PHP >= 8.1
-- Composer
-- MySQL o cualquier otra base de datos compatible con Laravel
-- Node.js y NPM (para gestionar dependencias front-end si es necesario)
-- Laravel >= 10.x
-- Laravel Sanctum para autenticación de usuarios
+-   PHP >= 8.1
+-   Composer
+-   MySQL o cualquier otra base de datos compatible con Laravel
+-   Node.js y NPM (para gestionar dependencias front-end si es necesario)
+-   Laravel >= 10.x
+-   Laravel Sanctum para autenticación de usuarios
 
 ## Configuración Ejecutando un contenedor en Docker
 
@@ -27,9 +27,11 @@ docker-compose up -d
 docker-compose exec app php artisan migrate
 ```
 
-La aplicación estará disponible en http://127.0.0.1:8001
+La aplicación estará disponible en http://127.0.0.1:8081
 
 Phpmyadmin estará disponible en http://127.0.0.1:8083
+
+#### La documentación de la api en Swagger estrá disponible en http://127.0.0.1:8081/api/documentation#/
 
 ## Configuración Ejecución manual
 
@@ -89,23 +91,33 @@ La aplicación estará disponible en http://127.0.0.1:8000. o en el purto 8001 s
 ### Registro de Usuario
 
 Endpoint: POST /api/register
+
 Campos:
 
 name: Nombre del usuario
+
 email: Email del usuario
+
 password: Contraseña
+
 password_confirmation: Confirmación de la contraseña
+
 Inicio de Sesión
+
 Endpoint: POST /api/login
+
 Campos:
 
 email: Email del usuario
+
 password: Contraseña
+
 Este endpoint devuelve un token que debe ser utilizado en todas las solicitudes protegidas.
 
 #### Cerrar Sesión
 
 Endpoint: POST /api/logout
+
 Autenticación: Requiere el token generado en el inicio de sesión.
 
 ## Endpoints Principales
@@ -113,19 +125,29 @@ Autenticación: Requiere el token generado en el inicio de sesión.
 ### Productos
 
 Listar productos: GET /api/products
+
 Ver producto por ID: GET /api/products/{id}
+
 Crear producto: POST /api/products
+
 Actualizar producto: PUT /api/products/{id}
+
 Eliminar producto: DELETE /api/products/{id}
+
 Exportar productos a Excel: GET /api/products/export
 
 ### Órdenes
 
 Listar órdenes: GET /api/orders
+
 Ver orden por ID: GET /api/orders/{id}
+
 Crear orden: POST /api/orders
+
 Actualizar orden: PUT /api/orders/{id}
+
 Eliminar orden: DELETE /api/orders/{id}
+
 Exportar órdenes a Excel: GET /api/orders/export
 
 ## Exportación de Datos
@@ -133,6 +155,9 @@ Exportar órdenes a Excel: GET /api/orders/export
 Para exportar los datos a un archivo Excel, se pueden utilizar los siguientes endpoints:
 
 Exportar productos: GET /api/products/export
+
 Exportar órdenes: GET /api/orders/export
 
 Los archivos se generarán en formato .xlsx y serán descargables directamente desde el endpoint.
+
+#### La documentación de la api en Swagger estrá disponible en http://127.0.0.1:8000/api/documentation#/ o http://127.0.0.1:8001/api/documentation#/
