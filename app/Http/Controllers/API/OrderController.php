@@ -38,7 +38,7 @@ class OrderController extends Controller
      *         response=200,
      *         description="Lista de órdenes"
      *     ),
-     *     security={{"sanctum": {}}}
+     *     security={{"bearerAuth": {}}}
      * )
      */
 
@@ -90,7 +90,7 @@ class OrderController extends Controller
      *             @OA\Property(property="total", type="number", example=50.0)
      *         )
      *     ),
-     *     security={{"sanctum": {}}}
+     *     security={{"bearerAuth": {}}}
      * )
      */
 
@@ -171,7 +171,7 @@ class OrderController extends Controller
      *             @OA\Property(property="error", type="string", example="Error to update order")
      *         )
      *     ),
-     *     security={{"sanctum": {}}}
+     *     security={{"bearerAuth": {}}}
      * )
      */
     public function update(Request $request, $id)
@@ -234,7 +234,7 @@ class OrderController extends Controller
      *             @OA\Property(property="error", type="string", example="Error to delete order")
      *         )
      *     ),
-     *     security={{"sanctum": {}}}
+     *     security={{"bearerAuth": {}}}
      * )
      */
 
@@ -271,7 +271,7 @@ class OrderController extends Controller
      *             @OA\Property(property="error", type="string", example="Error to export orders")
      *         )
      *     ),
-     *     security={{"sanctum": {}}}
+     *     security={{"bearerAuth": {}}}
      * )
      */
 

@@ -13,12 +13,6 @@ use Symfony\Component\HttpFoundation\Response;
 use Exception;
 
 /**
- * @OA\Info(
- *      version="1.0.0",
- *      title="API ProductOrderService",
- *      description="Documentación de API para gestionar productos y órdenes"
- * )
- *
  * @OA\Tag(
  *     name="Products",
  *     description="API Endpoints para productos"
@@ -45,7 +39,7 @@ class ProductController extends Controller
      *         response=200,
      *         description="Lista de productos"
      *     ),
-     *     security={{"sanctum": {}}}
+     *     security={{"bearerAuth": {}}}
      * )
      */
 
@@ -86,7 +80,7 @@ class ProductController extends Controller
      *             @OA\Property(property="stock", type="integer", example=100)
      *         )
      *     ),
-     *     security={{"sanctum": {}}}
+     *     security={{"bearerAuth": {}}}
      * )
      */
 
@@ -175,7 +169,7 @@ class ProductController extends Controller
      *             @OA\Property(property="error", type="string", example="Error to update product")
      *         )
      *     ),
-     *     security={{"sanctum": {}}}
+     *     security={{"bearerAuth": {}}}
      * )
      */
 
@@ -243,7 +237,7 @@ class ProductController extends Controller
      *             @OA\Property(property="error", type="string", example="Error to delete product")
      *         )
      *     ),
-     *     security={{"sanctum": {}}}
+     *     security={{"bearerAuth": {}}}
      * )
      */
 
@@ -283,7 +277,7 @@ class ProductController extends Controller
      *             @OA\Property(property="error", type="string", example="Error to export products")
      *         )
      *     ),
-     *     security={{"sanctum": {}}}
+     *     security={{"bearerAuth": {}}}
      * )
      */
 
