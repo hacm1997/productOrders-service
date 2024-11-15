@@ -2,6 +2,8 @@
 
 ProductOrderService es una API de backend construida en Laravel que permite gestionar productos y órdenes, incluyendo funcionalidad de autenticación, exportación de datos a Excel, y protección de rutas.
 
+Nota: Las peticiones puedes hacerla desde Swagger o descargar la colección de la carpeta Postman del repositorio
+
 ## Requisitos previos
 
 -   PHP >= 8.1
